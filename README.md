@@ -22,16 +22,16 @@ sudo mv 'your eigen' /usr/local/include
 
 Installation:
 1. Use following commands
-# Add package repository
+#Add package repository
 sudo apt-get install -y gpg-agent wget
 wget -qO - https://repositories.intel.com/graphics/intel-graphics.key | sudo apt-key add -
 sudo apt-add-repository 'deb [arch=amd64] https://repositories.intel.com/graphics/ubuntu focal main'
 
-# Install run-time packages
+#Install run-time packages
 sudo apt-get update
 sudo apt-get install intel-opencl-icd intel-level-zero-gpu level-zero intel-media-va-driver-non-free libmfx1
 
-# OPTIONAL: Install developer packages
+#OPTIONAL: Install developer packages
 sudo apt-get install libigc-dev intel-igc-cm libigdfcl-dev libigfxcmrt-dev level-zero-dev
 stat -c "%G" /dev/dri/render*
 ... # for GPU (not required)
